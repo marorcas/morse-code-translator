@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.translator {
+  display: flex;
+  gap: 1em;
+  border: 1px solid black;
+  padding: 1em;
+}
+.translator__input, .translator__output {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.translator__input__field, .translator__output__field {
+  height: 10em;
+}
+
+.switch {
+  display: block;
+}
+
+.switch-btn {
+  padding: 5px;
+}
+
+.translate-btn {
+  margin: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

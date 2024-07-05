@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Morse Code Translator</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <main>
+            <h1 class="heading">Morse Code Translator</h1>
+
+            <div class="translator">
+                <div class="translator__input">
+                    <select class="translator__input__selector">
+                        <option value="eng">English</option>
+                        <option value="mrs">Morse</option>
+                    </select>
+
+                    <input class="translator__input__field">
+                </div>
+
+                <div class="switch">
+                    <img 
+                        class="switch-btn"
+                        src="./assets/arrow-left-right.svg" 
+                    />
+                </div>
+
+                <div class="translator__output">
+                    <select class="translator__output__selector">
+                        <option value="mrs">Morse</option>
+                        <option value="eng">English</option>
+                    </select>
+
+                    <input class="translator__output__field">
+                </div>
+            </div>
+
+            <button class="translate-btn">Translate</button>
+        </main>
+    </body>
+</html>
