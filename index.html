@@ -16,7 +16,6 @@
                     <select 
                         class="translator__selector__input"
                         id="inputType"
-                        onchange="updateSelect()"
                     >
                         <option value="eng">English</option>
                         <option value="mrs">Morse</option>
@@ -39,11 +38,13 @@
                 </div>
 
                 <div class="translator__field">
-                    <input 
+                    <textarea 
                         type="text"
                         class="translator__field__input"
                         id="input"
-                    />
+                        maxlength="5000"
+                    >
+                    </textarea>
 
                     <div class="translator__field__output" id="output"></div>
                 </div>

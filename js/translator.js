@@ -20,7 +20,7 @@ export const engToMorse = (input) => {
         });
     });
 
-    return morseArr.map(word => word.join(" ")).join("       ");
+    return morseArr.map(word => word.join(" ")).join(" / ");
 };
 
 export const morseToEng = (input) => {

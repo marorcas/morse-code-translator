@@ -3,6 +3,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 95vh;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .translator {
@@ -11,7 +14,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 100%;
+  width: 95%;
   gap: 1em;
   padding: 1em;
 }
@@ -24,6 +27,7 @@ main {
 .translator__selector__input, .translator__selector__output {
   width: 50%;
   padding: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .translator__selector__output {
   pointer-events: none;
@@ -46,12 +50,15 @@ main {
 }
 .translator__field__input {
   height: 50%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .translator__field__output {
   height: 50%;
-  background-color: grey;
+  background-color: #f0f0f0;
   border: 1px solid grey;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
