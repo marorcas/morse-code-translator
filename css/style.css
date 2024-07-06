@@ -7,29 +7,42 @@ main {
 
 .translator {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
   gap: 1em;
-  border: 1px solid black;
   padding: 1em;
 }
-.translator__input, .translator__output {
+.translator__selector {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
-.translator__input__field, .translator__output__field {
-  height: 10em;
-}
-
-.switch {
-  display: block;
-}
-
-.switch-btn {
+.translator__selector__input, .translator__selector__output {
+  width: 50%;
   padding: 5px;
 }
-
-.translate-btn {
-  margin: 1em;
+.translator__switch-btn__img {
+  padding: 0.5em 1em;
+}
+.translator__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  gap: 1em;
+}
+.translator__field__input {
+  height: 50%;
+}
+.translator__field__output {
+  height: 50%;
+  background-color: grey;
+  border: 1px solid grey;
 }
 
 /*# sourceMappingURL=style.css.map */

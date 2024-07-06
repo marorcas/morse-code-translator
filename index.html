@@ -5,39 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Morse Code Translator</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script type="module" src="./js/translator.js" defer></script>
     </head>
     <body>
         <main>
             <h1 class="heading">Morse Code Translator</h1>
 
             <div class="translator">
-                <div class="translator__input">
-                    <select class="translator__input__selector">
+                <div class="translator__selector">
+                    <select class="translator__selector__input">
                         <option value="eng">English</option>
                         <option value="mrs">Morse</option>
                     </select>
+                    
+                    <div class="translator__switch-btn">
+                        <img 
+                            class="translator__switch-btn__img"
+                            src="./assets/arrow-left-right.svg" 
+                        />
+                    </div>
 
-                    <input class="translator__input__field">
-                </div>
-
-                <div class="switch">
-                    <img 
-                        class="switch-btn"
-                        src="./assets/arrow-left-right.svg" 
-                    />
-                </div>
-
-                <div class="translator__output">
-                    <select class="translator__output__selector">
+                    <select class="translator__selector__output">
                         <option value="mrs">Morse</option>
                         <option value="eng">English</option>
                     </select>
+                </div>
 
-                    <input class="translator__output__field">
+                <div class="translator__field">
+                    <input class="translator__field__input">
+
+                    <div class="translator__field__output"></div>
                 </div>
             </div>
-
-            <button class="translate-btn">Translate</button>
         </main>
     </body>
 </html>

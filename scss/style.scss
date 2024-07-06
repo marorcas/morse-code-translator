@@ -7,29 +7,48 @@ main {
 
 .translator {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
     gap: 1em;
-    border: 1px solid black;
     padding: 1em;
 
-    &__input, &__output {
+    &__selector {
         display: flex;
-        flex-direction: column;
-        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
 
-        &__field {
-            height: 10em;
+        &__input, &__output {
+            width: 50%;
+            padding: 5px;
         }
     }
-}
 
-.switch {
-    display: block;
-}
+    &__switch-btn {
+        &__img {
+            padding: 0.5em 1em;
+        }
+    }
 
-.switch-btn {
-    padding: 5px;
-}
+    &__field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 90%;
+        gap: 1em;
 
-.translate-btn {
-    margin: 1em;
+        &__input {
+            height: 50%;
+        }
+
+        &__output {
+            height: 50%;
+            background-color: grey;
+            border: 1px solid grey;
+        }
+    }
 }
