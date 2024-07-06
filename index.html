@@ -16,12 +16,13 @@
                     <select 
                         class="translator__selector__input"
                         id="inputType"
+                        onchange="updateSelect()"
                     >
                         <option value="eng">English</option>
                         <option value="mrs">Morse</option>
                     </select>
                     
-                    <div class="translator__switch-btn">
+                    <div class="translator__switch-btn" id="switch">
                         <img 
                             class="translator__switch-btn__img"
                             src="./assets/arrow-left-right.svg" 

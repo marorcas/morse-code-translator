@@ -25,6 +25,14 @@ main {
   width: 50%;
   padding: 5px;
 }
+.translator__selector__output {
+  pointer-events: none;
+  touch-action: none;
+  appearance: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 85%;
+}
 .translator__switch-btn__img {
   padding: 0.5em 1em;
 }
