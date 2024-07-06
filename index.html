@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Morse Code Translator</title>
         <link rel="stylesheet" href="./css/style.css">
-        <script type="module" src="./js/translator.js" defer></script>
+        <script type="module" src="./js/dom-utils.js" defer></script>
     </head>
     <body>
         <main>
@@ -13,7 +13,10 @@
 
             <div class="translator">
                 <div class="translator__selector">
-                    <select class="translator__selector__input">
+                    <select 
+                        class="translator__selector__input"
+                        id="inputType"
+                    >
                         <option value="eng">English</option>
                         <option value="mrs">Morse</option>
                     </select>
@@ -25,16 +28,23 @@
                         />
                     </div>
 
-                    <select class="translator__selector__output">
+                    <select 
+                        class="translator__selector__output"
+                        id="outputType"
+                    >
                         <option value="mrs">Morse</option>
                         <option value="eng">English</option>
                     </select>
                 </div>
 
                 <div class="translator__field">
-                    <input class="translator__field__input">
+                    <input 
+                        type="text"
+                        class="translator__field__input"
+                        id="input"
+                    />
 
-                    <div class="translator__field__output"></div>
+                    <div class="translator__field__output" id="output"></div>
                 </div>
             </div>
         </main>
