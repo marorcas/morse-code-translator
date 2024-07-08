@@ -14,15 +14,28 @@ input.addEventListener('keypress', (e) => {
         if (inputType.value === "eng") {
             // console.log("The type is eng");
             // console.log(engToMorse(input.value));
-            const outputText = engToMorse(input.value);
 
-            output.innerHTML = outputText;
+            try {
+                const outputText = engToMorse(input.value);
+
+                output.innerHTML = outputText
+            } catch (e) {
+                console.log(e);
+                alert(e.message);
+            }
+            
         } else {
             // console.log("The type is mrs");
             // console.log(morseToEng(input.value));
-            const outputText = morseToEng(input.value);
 
-            output.innerHTML = outputText;
+            try {
+                const outputText = morseToEng(input.value);
+
+                output.innerHTML = outputText;
+            } catch (e) {
+                console.log(e);
+                alert(e.message);
+            }
         }
     }
 });
@@ -44,9 +57,11 @@ inputType.addEventListener('change', () => {
     if (inputType.value === "eng") {
         outputType.value = "mrs";
         switchText();
+        switchInstructions();
     } else {
         outputType.value = "eng";
         switchText();
+        switchInstructions();
     }
 });
 
@@ -60,6 +75,7 @@ switchBtn.addEventListener('click', () => {
     outputType.value = tempVal;
 
     switchText();
+    switchInstructions();
 });
 
 // deletes text in output if text in input is deleted
@@ -69,3 +85,22 @@ input.addEventListener('input', () => {
         output.innerHTML = "";
     }
 });
+
+
+// clear button
+const clearBtn = document.getElementById('clear');
+clearBtn.addEventListener('click', () => {
+    input.value = "";
+    output.value = "";
+});
+
+
+// instructions content
+const instructions = document.getElementById('instructions');
+const switchInstructions = () => {
+    if (inputType.value === "eng") {
+        instructions.innerHTML = "This translator will ommit any non-letter characters from the translation. In the morse code translation, spaces between words will be represented with a '/'.";
+    } else {
+        instructions.innerHTML = "This translator does not translate non-letter characters. Please use spaces in between morse code letters and '/' in between words.";
+    }
+};

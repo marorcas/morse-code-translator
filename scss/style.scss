@@ -10,6 +10,17 @@ main {
     font-family: v.$text-font;
 }
 
+.instructions__container {
+    width: 80%;
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}
+
+#instructions {
+    color: rgb(71, 71, 71);
+}
+
 .translator {
     display: flex;
     flex-direction: column;
@@ -58,6 +69,7 @@ main {
 
         &__input {
             height: 50%;
+            padding: 1em;
             font-family: v.$text-font;
         }
 
@@ -68,6 +80,19 @@ main {
             white-space: pre-wrap;
             overflow-y: auto;
             padding: 1em;
+            color: black;
+            font-family: v.$text-font;
         }
     }
+}
+
+#clear {
+    width: 30%;
+    padding: 0.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

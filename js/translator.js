@@ -12,13 +12,25 @@ export const engToMorse = (input) => {
     // first filter characters that are letters
     // then turn each char into upper case
     // then turn each char into its morse equivalent
-    const morseArr = lettersArr.map((word) => {
-        return word.filter(char => /[a-zA-Z]/.test(char)).map((char) => {
-            const letterUpper = char.toUpperCase();
+    // const morseArr = lettersArr.map((word) => {
+    //     return word.filter(char => /[a-zA-Z]/.test(char)).map((char) => {
+    //         const letterUpper = char.toUpperCase();
 
+    //         return morse[letterUpper];
+    //     });
+    // });
+
+    const morseArr = lettersArr.map((word) => {
+        return word.map((char) => {
+            if (/[^a-zA-Z]/.test(char)) {
+                throw new Error("Please enter valid English characters (letters from A to Z).");
+            }
+            
+            const letterUpper = char.toUpperCase();
             return morse[letterUpper];
         });
     });
+    
 
     return morseArr.map(word => word.join(" ")).join(" / ");
 };
@@ -38,6 +50,8 @@ export const morseToEng = (input) => {
                     return letter.toLowerCase();
                 }
             }
+
+            throw new Error("Please only enter valid morse code characters (letters from A to Z).");
         });
     });
 

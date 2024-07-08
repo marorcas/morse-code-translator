@@ -1,5 +1,4 @@
 import { engToMorse, morseToEng } from "./translator.js";
-import { exampleError } from "./translator-errors.js";
 
 describe("Test cases for english to morse code translator function", () => {
     test("Given an input in english, an output is produced of the correct translation in morse code", () => {
@@ -7,14 +6,14 @@ describe("Test cases for english to morse code translator function", () => {
         expect(engToMorse("How are you?")).toBe(".... --- .-- / .- .-. . / -.-- --- ..-");
     });
 
-    // it("throws an example error", () => {
-    //     expect(() => {
-    //         engToMorse("hello", "hi");
-    //     }).toThrow(exampleError);
-    //     expect(() => {
-    //         engToMorse("hello", 1);
-    //     }).toThrow(exampleError);
-    // });
+    it("throws an error if there is a non-letter character", () => {
+        expect(() => {
+            engToMorse("&&&");
+        }).toThrow();
+        expect(() => {
+            engToMorse("hello!");
+        }).toThrow();
+    });
 });
 
 describe("Test cases for morse code to english translator function", () => {
@@ -23,15 +22,12 @@ describe("Test cases for morse code to english translator function", () => {
         expect(morseToEng(".... --- .-- / .- .-. . / -.-- --- ..-")).toBe("how are you");
     });
 
-//     it("throws an example error", () => {
-//         expect(() => {
-//             morseToEng("hello", "hi");
-//         }).toThrow(exampleError);
-//         expect(() => {
-//             morseToEng("hello", 1);
-//         }).toThrow(exampleError);
-//     });
+    it("throws an error if an invalid morse code character is entered", () => {
+        expect(() => {
+            morseToEng("...___.");
+        }).toThrow();
+        expect(() => {
+            morseToEng(". / . .__..-");
+        }).toThrow();
+    });
 });
-
-// expect().toEqual()
-// expect().not.toBe()

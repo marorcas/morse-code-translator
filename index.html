@@ -11,6 +11,10 @@
         <main>
             <h1 class="heading">Morse Code Translator</h1>
 
+            <div class="instructions__container">
+                <p id="instructions">This translator will ommit any non-letter characters from the translation. In the morse code translation, spaces between words will be represented with a '/'.</p>
+            </div>
+
             <div class="translator">
                 <div class="translator__selector">
                     <select 
@@ -43,10 +47,25 @@
                         class="translator__field__input"
                         id="input"
                         maxlength="5000"
+                        placeholder="Enter text"
+                    >
+                    </textarea>
+                    <!-- <div class="char-count" id="charCount">0/5,000</div> -->
+
+                    <!-- <div class="translator__field__output" id="output"></div> -->
+
+                    <textarea 
+                        type="text"
+                        class="translator__field__output"
+                        id="output"
+                        placeholder="Translation"
+                        disabled
                     >
                     </textarea>
 
-                    <div class="translator__field__output" id="output"></div>
+                    <div class="button-container">
+                        <button id="clear">Clear text</button>
+                    </div>
                 </div>
             </div>
         </main>
