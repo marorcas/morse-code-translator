@@ -37,21 +37,32 @@ export const engToMorse = (input) => {
 
 export const morseToEng = (input) => {
     // create array of strings with the words from input 
-    const wordsArr = input.split("/");
+    const wordsArr = input.split(" / ");
 
     // make each string in the array into an array of letters
     const lettersArr = wordsArr.map(word => word.split(" "));
+    console.log(lettersArr);
 
+    // try to use map again
     // turn each letter into english 
     const engArr = lettersArr.map((word) => {
         return word.map((char) => {
-            for (let letter in morse) {
-                if (morse[letter] === char) {
-                    return letter.toLowerCase();
-                }
+            console.log(char);
+            if (!(Object.values(morse).includes(char.trim()))) {
+                throw new Error("Please only enter valid morse code characters.");
             }
 
-            throw new Error("Please only enter valid morse code characters (letters from A to Z).");
+            const indexOfChar = Object.values(morse).indexOf(char);
+            console.log(indexOfChar);
+
+            return Object.keys(morse)[indexOfChar].toLowerCase();
+            // for (let letter in morse) {
+            //     if (morse[letter] === char) {
+            //         return letter.toLowerCase();
+            //     }
+            // }
+
+            
         });
     });
 
