@@ -10,7 +10,6 @@ Morse code translator application
 - [Features](#features)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
-- [Changelog](#changelog)
 
 ## Description
 
