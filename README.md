@@ -2,7 +2,7 @@
 
 Morse code translator application
 
-[Live Link](https://marorcas.github.io/morse-code-translator/){:target="_blank"}
+[Live Link](https://marorcas.github.io/morse-code-translator/)
 
 ## Table of Contents
 
