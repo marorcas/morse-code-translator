@@ -99,7 +99,7 @@ clearBtn.addEventListener('click', () => {
 const instructions = document.getElementById('instructions');
 const switchInstructions = () => {
     if (inputType.value === "eng") {
-        instructions.innerHTML = "This translator will ommit any non-letter characters from the translation. In the morse code translation, spaces between words will be represented with a '/'.";
+        instructions.innerHTML = "This translator does not accept any non-letter characters. In the morse code translation, spaces between words will be represented with a '/'.";
     } else {
         instructions.innerHTML = "This translator does not translate non-letter characters. Please use spaces in between morse code letters and '/' in between words.";
     }
